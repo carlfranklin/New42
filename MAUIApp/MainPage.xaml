@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIApp.MainPage">
+
+    <ScrollView>
+        <CollectionView Margin="20" 
+                        ItemsSource="{Binding BlogPosts}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <VerticalStackLayout Margin="0,0,0,20">
+                        <Border BackgroundColor="LightGray">
+                            <HorizontalStackLayout>
+                                <HorizontalStackLayout Margin="0,0,10,0">
+                                    <Image Source="https://blazorroadshow.azurewebsites.net/blazortrainfiles/blogicon.png" 
+                                           HeightRequest="100"
+                                           WidthRequest="100"/>
+                                </HorizontalStackLayout>
+                                <VerticalStackLayout VerticalOptions="CenterAndExpand" >
+                                    <HorizontalStackLayout>
+                                        <Label TextColor="Black"
+                                            Text="{Binding PublishDate, 
+                                            StringFormat='{}{0:MMM dd, yyyy}'}" 
+                                            FontSize="18"  />
+                                        <Label Margin="10,0,0,0"
+                                            Text="{Binding Author}" 
+                                            TextColor="Black"
+                                            FontSize="18" 
+                                            FontAttributes="Bold" />
+                                    </HorizontalStackLayout>
+                                    <Label Text="{Binding Title}" 
+                                       TextColor="Black"
+                                       LineBreakMode="WordWrap"
+                                       FontSize="22" />
+                                </VerticalStackLayout>
+                            </HorizontalStackLayout>
+                        </Border>
+                        <Label Margin="20" 
+                               Text="{Binding Description}" 
+                               LineBreakMode="WordWrap"
+                               TextType="Html" 
+                               FontSize="22" />
+                    </VerticalStackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </ScrollView>
+
+</ContentPage>
