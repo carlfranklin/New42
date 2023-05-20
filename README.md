@@ -473,13 +473,21 @@ And here it is running on my Android phone:
 
 ## Mac OS (MacCatalyst)
 
-To run the app on the Mac, I cloned this repo on the mac and issued the following command:
+To run the app on the Mac, I cloned this repo on the mac and issued the following command to load the latest version:
 
 ```
-
+git pull -r
 ```
 
+Then I issued this command to run the app as a Mac Desktop app:
 
+```
+dotnet build -t:Run -f net7.0-maccatalyst
+```
+
+![image-20230520091757711](images/image-20230520091757711.png)
+
+Note that it wraps nicely and looks good!
 
 ## Windows Forms
 
@@ -951,4 +959,7 @@ On the other hand, the browser providers have achieved consistency in the way HT
 
 Blazor is an extremely expressive and productive UI framework.
 
-Blazor can be used to build apps on any platform.
+Blazor can be used to build apps on any platform, and will look the same everywhere.
+
+
+
