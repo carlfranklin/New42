@@ -39,6 +39,7 @@
             blazorWebView1.Size = new Size(800, 450);
             blazorWebView1.TabIndex = 0;
             blazorWebView1.Text = "blazorWebView1";
+            blazorWebView1.Click += blazorWebView1_Click;
             // 
             // Form1
             // 

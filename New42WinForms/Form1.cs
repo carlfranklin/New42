@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.Components.WebView.WindowsForms;
 using Microsoft.Extensions.DependencyInjection;
-using System.Diagnostics.Metrics;
 
 namespace New42WinForms;
 
